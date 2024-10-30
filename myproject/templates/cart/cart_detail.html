@@ -1,0 +1,7 @@
+<h2>Shopping Cart</h2>
+<ul>
+    {% for cart_item in cart_items %}
+        <li>{{ cart_item.product.name }} - Quantity: {{ cart_item.quantity }}</li>
+    {% endfor %}
+</ul>
+<p>Total: ${{ total }}</p>

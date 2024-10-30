@@ -1,0 +1,404 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png'%}" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>portfolio MS</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <span class="nav__logo-circle">MS</span>
+                <span class="nav__logo-name">Mahmoud Sayed</span>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <span class="nav__title">Menu</span>
+                <h3 class="nav__name">Mahmoud</h3>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="{% url 'home'%}" class="nav__link active-link">Home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'about_me'%}" class="nav__link">Who Am I</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'projects'%}" class="nav__link">Projects</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'services'%}" class="nav__link">Services</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link nav__link-button">Contact Me</a>
+                    </li>
+                </ul>
+                <!-- ---  CLOSE BUTTON --- -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <div class="nav__buttons">
+                <!-- -- TOGGLE BUTTONS --  -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-4-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <h1 class="home__name">Mahmoud Sayed</h1>
+                <div class="home__perfil">
+                    <div class="home__image">
+                        <img src="{% static 'img/customer1.jpg' %}" alt="image" class="home__img">
+                        <div class="home__shadow"></div>
+                        <img src="{% static 'img/curved-arrow.svg' %}" alt="image" class="home__arrow">
+                        <img src="{% static 'img/random-lines.svg' %}" alt="image" class="home__line">
+                        <div class="geometric-box"></div>
+                    </div>
+                    <div class="home__social">
+                        <a href="https://www.facebook.com/mhmud.sydd/" target="_blank" class="home__social-link">
+                            <i class="ri-facebook-line"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mhmudsyed/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mhmudsayd/" target="_blank" class="home__social-link">
+                            <i class="ri-linkedin-line"></i>
+                        </a>
+                        <a href="https://github.com/mude9" target="_blank" class="home__social-link">
+                            <i class="ri-github-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="home__info">
+                    <p class="home__description">
+                        <b>Artificial Intelligence Engineer</b>, with knowledge in Machine learning with <b>Pgthon</b> and Deep learning, I offer the best projects resulting in quality work.
+                    </p>
+                    <a href="#about" class="home__scroll">
+                        <div class="home__scroll-box">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <span class="home__scroll-text">
+                    Scroll Down
+                </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <a href="{% url 'about_me'%}" class="nav__link">
+                    <h2 class="section__title-1">
+                        About Me.
+                    </h2>
+                </a>
+                <div class="about__perfil">
+                    <div class="about__image">
+                        <img src="{% static 'img/about.jpg'%}" alt="image" class="about__img">
+                        <div class="about__shadow"></div>
+                        <div class="geometric-box"></div>
+                        <img src="{% static 'img/random-lines.svg'%}" alt="image" class="about__line">
+                        <div class="about__box"></div>
+                    </div>
+                </div>
+                <div class="about__info">
+                    <p class="about__description">
+
+                        Passionate AI engineer, <b>adept at crafting intelligent solutions.</b> and have <b>9 Month</b> of experience. I specialize in
+                        <b>creating algorithms</b> that transform data into meaningful insights. With a foundation in <b>machine learning</b> and a knack for <b>problem-solving.</b> My journey is defined by innovation, dedication, and a relentless pursuit
+                        of excellence..
+                    <b> For More Details, please check <a href="{% url 'about_me'%}" class="nav__link">About Me Page</a> </b>
+                    </p>
+
+                    <ul class="about__list">
+                        <li class="about__item">
+                            <b>Proficiency in languages such as: <br>Python, machine learning concepts, deep learning frameworks, data preprocessing,
+                            Ability to design and optimize algorithms for various AI applications
+                        </li>
+                    </ul>
+                    <div class="about__buttons">
+                        <a href="#contact" class="button">
+                            <i class="ri-send-plane-line"></i> Contact Me
+                        </a>
+                        <a href="{% static 'https://www.linkedin.com/in/mhmudsayd/'%}" target="_blank" class="button__ghost">
+                            <i class="ri-linkedin-box-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== SERVICES ====================-->
+        <section class="services section">
+            <a href="{% url 'services'%}">
+                <h2 class="section__title-1">
+                    Services.
+                </h2>
+            </a>
+            <div class="services__container container grid">
+
+                <article class="services__card">
+                    <div class="services__border"></div>
+                    <div class="services__content">
+                        <div class="services__icon">
+                            <div class="services__box"></div>
+                            <i class="ri-layout-4-line"></i>
+                        </div>
+                        <h2 class="services__title">Developing AI applications</h2>
+                        <p class="services__description">
+                            <span class="services__title">Algorithm Design and Optimization</span> <br> Ability to design and optimize algorithms for various AI applications, considering efficiency and scalability.
+                        </p>
+                    </div>
+
+                </article>
+
+                <article class="services__card">
+                    <div class="services__border"></div>
+                    <div class="services__content">
+                        <div class="services__icon">
+                            <div class="services__box"></div>
+                            <i class="ri-code-box-line"></i>
+                        </div>
+                        <h2 class="services__title">Natural Language Processing</h2>
+                        <p class="services__description">
+                            <span class="services__title">NLP</span><br> Familiarity with NLP techniques for tasks such as text classification, sentiment analysis, and language translation.
+                        </p>
+                    </div>
+
+                </article>
+
+                <article class="services__card">
+                    <div class="services__border"></div>
+                    <div class="services__content">
+                        <div class="services__icon">
+                            <div class="services__box"></div>
+                            <i class="ri-smartphone-line"></i>
+                        </div>
+                        <h2 class="services__title">Problem-Solving</h2>
+                        <p class="services__description">
+                            <span class="services__title">Strong analytical</span> <br> and problem-solving skills to tackle complex AI challenges and optimize model performance.
+                        </p>
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+        <!--==================== PROJECTS ====================-->
+        <section class="projects section" id="projects">
+            <h2 class="section__title-1">
+                <span>Projects.</span>
+            </h2>
+            <div class="projects__container container grid">
+                <article class="projects__card">
+                    <div class="projects__image">
+                        <img src="{% static 'img/recognition.PNG'%}" alt="image" class="projects__img">
+                        <a href="{% url 'projects'%}" class="projects__button button">
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+                    </div>
+                    <div class="projects__content">
+                        <h3 class="projects__subtitle">Image Recognition</h3>
+                        <h2 class="projects__title">Image Recognition System</h2>
+                        <p class="projects__description">
+                            Develop an image recognition system using convolutional neural networks (CNNs) to classify objects in images.
+                        </p>
+                    </div>
+                    <div class="projects__buttons">
+                        <a href="" target="_blank" class="projects__link">
+                            <i class="ri-github-line"></i> View code
+                        </a>
+                        <a href="" target="_blank" class="projects__link">
+                            <i class="ri-dribbble-line"></i> live
+                        </a>
+                    </div>
+                </article>
+
+                <article class="projects__card">
+                    <div class="projects__image">
+                        <img src="{% static 'img/ai-chatbot-app.png'%}" alt="image" class="projects__img">
+                        <a href="{% url 'projects'%}" class="projects__button button">
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+                    </div>
+                    <div class="projects__content">
+                        <h3 class="projects__subtitle">Chatbot</h3>
+                        <h2 class="projects__title">Chatbot with Natural Language Processing (NLP)</h2>
+                        <p class="projects__description">
+                            Create a chatbot that can understand and respond to user queries using NLP techniques, integrating with platforms like Slack or Facebook Messenger.
+                        </p>
+                    </div>
+                    <div class="projects__buttons">
+                        <a href="" target="_blank" class="projects__link">
+                            <i class="ri-github-line"></i> View code
+                        </a>
+                        <a href="" target="_blank" class="projects__link">
+                            <i class="ri-dribbble-line"></i> Live
+                        </a>
+                    </div>
+                </article>
+
+
+                <article class="projects__card">
+                    <div class="projects__image">
+                        <img src="{% static 'img/Healthcare.png'%}" alt="image" class="projects__img">
+                        <a href="{% url 'projects'%}" class="projects__button button">
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+                    </div>
+                    <div class="projects__content">
+                        <h3 class="projects__subtitle">Healthcare</h3>
+                        <h2 class="projects__title">Healthcare Diagnosis System</h2>
+                        <p class="projects__description">
+                            Design a system that uses machine learning to analyze medical data (such as X-rays or patient records) for automated disease diagnosis or prognosis.
+                        </p>
+                    </div>
+                    <div class="projects__buttons">
+                        <a href="" target="_blank" class="projects__link">
+                            <i class="ri-github-line"></i> View code
+                        </a>
+                        <a href="" target="_blank" class="projects__link">
+                            <i class="ri-dribbble-line"></i> Live
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!--==================== CONTACT ====================-->
+        <section class="contact section" id="contact">
+            <div class="contact__container grid">
+                <div class="contact__data">
+                    <h2 class="section__title-2">
+                        <span>Contact Me.</span>
+                    </h2>
+                    <p class="contact__description-1">
+                        I will read all emails. Send me any message you want and I'll get back to you.
+                    </p>
+
+                    <p class="contact__description-1">
+                        I need your <b>Name</b> and <b>Email Address</b>, but you won't receive anything other than your reply.
+                            </p>
+                            <div class="geometric-box"></div>
+                </div>
+                <div class="contact__mail">
+                    <h2 class="contact__title">
+                        Send Me A Message
+                    </h2>
+                    <form action="" class="contact__form" id="contact-form">
+                        <div class="contact__group">
+                            <div class="contact__box">
+                                <input type="text" name="user_name" class="contact__input" id="name" required placeholder="First Name ">
+                                <label for="name" class="contact__label">First Name </label>
+                            </div>
+
+                            <div class="contact__box">
+                                <input type="email" name="user_email" class="contact__input" id="email" required placeholder="Email Address">
+                                <label for="email" class="contact__label">Email Address</label>
+                            </div>
+                        </div>
+                        <div class="contact__box">
+                            <input type="text" name="user_subject" class="contact__input" id="subject" required placeholder="Subject">
+                            <label for="subject" class="contact__label">Subject</label>
+                        </div>
+
+                        <div class="contact__box contact__area">
+                            <textarea name="user_message" id="message" class="contact__input" required placeholder="Message"></textarea>
+                            <label for="message" class="contact__label">Message</label>
+                        </div>
+                        <p class="contact__message" id="contact-message"></p>
+                        <button type="submit" class="contact__button button">
+                    <i class="ri-send-plane-fill"></i> Send Message
+                </button>
+                    </form>
+                </div>
+                <div class="contact__social">
+                    <img src="{% static 'img/curved-arrow.svg'%}" alt="image" class="contact__social-arrow">
+                    <div class="contact__social-data">
+                        <div>
+                            <p class="contact__social-description-1">
+                                Do not want to send emails
+                            </p>
+                            <p class="contact__social-description-2">
+                                Write me on my social networks
+                            </p>
+                        </div>
+                        <div class="contact__social-links">
+                            <a href="https://www.facebook.com/mhmud.sydd/" target="_blank" class="contact__social-link"><i class="ri-facebook-circle-line"></i></a>
+                            <a href="https://www.instagram.com/mhmudsyed/" target="_blank" class="contact__social-link"><i class="ri-instagram-line"></i></a>
+                            <a href="https://www.linkedin.com/in/mhmudsayd/" target="_blank" class="contact__social-link"><i class="ri-linkedin-box-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <ul class="footer__links">
+                <li>
+                    <a href="{% url 'home'%}" class="footer-link">Home</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'about_me'%}" class="footer-link">Who Am I</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'projects'%}" class="footer-link">Projects</a>
+                </li>
+            </ul>
+            <span class="footer__copy">
+            &#169; All Rights Reserved By
+            <a href="#">Mahmoud</a>
+        </span>
+        </div>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-s-line"></i>
+    </a>
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+
+
+    <!--=============== EMAIL JS ===============-->
+
+
+    <!--=============== MAIN JS ===============-->
+    <script src="{% static 'js/main.js'%}"></script>
+</body>
+
+</html>

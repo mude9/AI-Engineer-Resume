@@ -1,0 +1,181 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png'%}" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>portfolio MS</title>
+</head>
+
+    <style>
+        projects__container container grid {
+            margin: 100;
+            padding: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        projects__content {
+            margin: 100;
+            padding: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        projects__buttons {
+            margin: 100;
+            padding: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="{% url 'home'%}" class="nav__logo"> 
+                <span class="nav__logo-circle">MS</span>
+                <span class="nav__logo-name">Mahmoud Sayed</span>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <span class="nav__title">Menu</span>
+                <h3 class="nav__name">Mahmoud</h3>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="{% url 'home'%}" class="nav__link active-link">Home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'about_me'%}" class="nav__link">Who Am I</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">Projects</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'services'%}" class="nav__link">Services</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'contact_me'%}" class="nav__link nav__link-button">Contact Me</a>
+                    </li>
+                </ul>
+                <!-- ---  CLOSE BUTTON --- -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <div class="nav__buttons">
+                <!-- -- TOGGLE BUTTONS --  -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-4-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+        <!--==================== PROJECTS ====================-->
+        <section class="projects section" id="projects">
+            <h2 class="section__title-1">
+                <span>Projects.</span>
+            </h2>
+        </section>
+
+        {% for project in projects %}
+
+        <div style="flex=direction: column;">
+    
+            <div class="projects__container container grid">
+                <article class="projects__card">
+                    <div class="projects__image">
+                        <img src="{{project.photo.url}}" alt="image" class="projects__img">
+                        <a href="{% url 'image'%}" class="projects__button button">
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+                    </div>
+
+                    <div class="projects__content">
+                        <h3 class="projects__subtitle">{{project.title}}</h3>
+                        <h2 class="projects__title">{{project.sub_title}}</h2>
+                        <p class="projects__description">{{project.description}}<p>
+                    </div>
+
+                    <div class="projects__buttons">
+                        <a href="https://github.com/mude9" target="_blank" class="projects__link">
+                            <i class="ri-github-line"></i> View code
+                        </a>
+                        <a href="" target="_blank" class="projects__link">
+                            <i class="ri-dribbble-line"></i> live
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+        {% endfor %}
+
+
+
+
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <ul class="footer__links">
+                <li>
+                    <a href="{% url 'home'%}" class="footer-link">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about" class="footer-link">Who Am I</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'projects'%}" class="footer-link">Projects</a>
+                </li>
+            </ul>
+            <span class="footer__copy">
+            &#169; All Rights Reserved By
+            <a href="#">Mahmoud</a>
+        </span>
+        </div>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-s-line"></i>
+    </a>
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+
+
+    <!--=============== EMAIL JS ===============-->
+
+
+    <!--=============== MAIN JS ===============-->
+    <script src="{% static 'js/main.js'%}"></script>
+</body>
+
+</html>

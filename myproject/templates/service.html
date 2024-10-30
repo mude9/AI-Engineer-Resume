@@ -1,0 +1,199 @@
+{% load static %}
+{% include 'cart/cart_detail.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png'%}" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>portfolio MS</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="{% url 'home'%}" class="nav__logo"> 
+                <span class="nav__logo-circle">MS</span>
+                <span class="nav__logo-name">Mahmoud Sayed</span>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <span class="nav__title">Menu</span>
+                <h3 class="nav__name">Mahmoud</h3>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="{% url 'home'%}" class="nav__link active-link">Home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'about_me'%}" class="nav__link">Who Am I</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'projects'%}" class="nav__link">Projects</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'services'%}" class="nav__link">Services</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'contact_me'%}" class="nav__link nav__link-button">Contact Me</a>
+                    </li>
+
+                </ul>
+                <!-- ---  CLOSE BUTTON --- -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <div class="nav__buttons">
+                <!-- -- TOGGLE BUTTONS --  -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-4-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+        <!--==================== SERVICES ====================-->
+        <section class="services section">
+            <a href="{% url 'services'%}">
+                <h2 class="section__title-1">
+                    Services.
+                </h2>
+            </a>
+
+
+            <div class="services__container container grid">
+
+                <article class="services__card">
+                    <div class="services__border"></div>
+                    <div class="services__content">
+                        <div class="services__icon">
+                            <div class="services__box"></div>
+                            <i class="ri-layout-4-line"></i>
+                        </div>
+                        <h2 class="services__title">Developing AI applications</h2>
+                        <p class="services__description">
+                            <span class="services__title">Algorithm Design and Optimization</span> <br> Ability to design and optimize algorithms for various AI applications, considering efficiency and scalability.
+                        </p>
+                    
+                    </div>
+                    <br/>
+                    <div class="about__buttons">
+                        <a href="{% url 'buy'%}" class="button">
+                            <i class="ri-send-plane-line"></i> Buy Now
+                        </a>
+                        <a href="{% static 'https://www.linkedin.com/in/mhmudsayd/'%}" target="_blank" class="button__ghost">
+                            <i class="ri-linkedin-box-line"></i>
+                        </a>
+                
+                </article>
+                                
+                <article class="services__card">
+                    <div class="services__border"></div>
+                    <div class="services__content">
+                        <div class="services__icon">
+                            <div class="services__box"></div>
+                            <i class="ri-code-box-line"></i>
+                        </div>
+                        <h2 class="services__title">Natural Language Processing</h2>
+                        <p class="services__description">
+                            <span class="services__title">NLP</span><br> Familiarity with NLP techniques for tasks such as text classification, sentiment analysis, and language translation.
+                        </p>
+                    </div>
+                    <br/>
+
+                    <div class="about__buttons">
+                        <a href="{% url 'buy'%}" class="button">
+                            <i class="ri-send-plane-line"></i> Buy Now
+                        </a>
+                        <a href="{% static 'https://www.linkedin.com/in/mhmudsayd/'%}" target="_blank" class="button__ghost">
+                            <i class="ri-linkedin-box-line"></i>
+                        </a>
+                    </div>
+
+                </article>
+
+                <article class="services__card">
+                    <div class="services__border"></div>
+                    <div class="services__content">
+                        <div class="services__icon">
+                            <div class="services__box"></div>
+                            <i class="ri-smartphone-line"></i>
+                        </div>
+                        <h2 class="services__title">Problem-Solving</h2>
+                        <p class="services__description">
+                            <span class="services__title">Strong analytical</span> <br> and problem-solving skills to tackle complex AI challenges and optimize model performance.
+                        </p>
+                    </div>
+                    <br/>
+
+                    <div class="about__buttons">
+                        <a href="{% url 'buy'%}" class="button">
+                            <i class="ri-send-plane-line"></i> Buy Now
+                        </a>
+                        <a href="{% static 'https://www.linkedin.com/in/mhmudsayd/'%}" target="_blank" class="button__ghost">
+                            <i class="ri-linkedin-box-line"></i>
+                        </a>
+                    </div>
+</article>
+
+
+            </div>
+        </section>
+
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <ul class="footer__links">
+                <li>
+                    <a href="{% url 'home'%}" class="footer-link">Home</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'about_me'%}" class="footer-link">Who Am I</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'projects'%}" class="footer-link">Projects</a>
+                </li>
+            </ul>
+            <span class="footer__copy">
+            &#169; All Rights Reserved By
+            <a href="#">Mahmoud</a>
+        </span>
+        </div>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-s-line"></i>
+    </a>
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+
+
+    <!--=============== EMAIL JS ===============-->
+
+
+    <!--=============== MAIN JS ===============-->
+    <script src="{% static 'js/main.js'%}"></script>
+</body>
+
+</html>

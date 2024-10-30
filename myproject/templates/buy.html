@@ -1,0 +1,202 @@
+{% load static %}
+{% include 'cart/cart_detail.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png'%}" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>portfolio MS</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <span class="nav__logo-circle">MS</span>
+                <span class="nav__logo-name">Mahmoud Sayed</span>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <span class="nav__title">Menu</span>
+                <h3 class="nav__name">Mahmoud</h3>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="{% url 'home'%}" class="nav__link active-link">Home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'about_me'%}" class="nav__link">Who Am I</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'projects'%}" class="nav__link">Projects</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'services'%}" class="nav__link">Services</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link nav__link-button">Contact Me</a>
+                    </li>
+                </ul>
+                <!-- ---  CLOSE BUTTON --- -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <div class="nav__buttons">
+                <!-- -- TOGGLE BUTTONS --  -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-4-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4; /* Light background color */
+        }
+
+        form-container {
+            background-color: #ffffff; /* White background for the form container */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+            width: 300px; /* Set a fixed width for the form container */
+            text-align: center; /* Center-align the content */
+        }
+
+        h2 {
+            color: #008000; /* Green color for the heading */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 8px;
+            color: #333; /* Dark gray color for labels */
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 16px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #008000; /* Green border */
+            border-radius: 4px;
+            font-size: 14px; /* Set a smaller font size */
+            outline: none; /* Remove input outline */
+        }
+
+        button {
+            background-color: #008000; /* Green color for the button */
+            color: #fff; /* White text color */
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style> 
+
+</head>
+
+<body>
+
+        <div class="form-container">
+            <h2>Buy Now</h2>
+            <form action="{% url 'order_done'%}" method="post">
+                {% csrf_token %}
+                <!-- Basic Buyer Information -->
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Card Information -->
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" placeholder="**** **** **** ****" required>
+
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YYYY" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="***" required>
+
+                <!-- Add more fields as needed, such as billing address -->
+
+                <!-- Submit Button -->
+                <button type="submit">Buy Now</button>
+            </form>
+        </div>
+
+
+    </body>
+
+
+
+<!--==================== FOOTER ====================-->
+    <div style="width: 100%; position: fixed; bottom: 0; background: #000;"> 
+<footer>
+        <div class="footer__container container grid">
+            <ul class="footer__links">
+                <li>
+                    <a href="{% url 'home'%}" class="footer-link">Home</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'about_me'%}" class="footer-link">Who Am I</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'projects'%}" class="footer-link">Projects</a>
+                </li>
+            </ul>
+            <span class="footer__copy">
+            &#169; All Rights Reserved By
+            <a href="#">Mahmoud</a>
+        </span>
+        </div>
+    </footer>
+</div>
+    <!--========== SCROLL UP ==========-->
+
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-s-line"></i>
+    </a>
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+
+
+    <!--=============== EMAIL JS ===============-->
+
+
+    <!--=============== MAIN JS ===============-->
+    <script src="{% static 'js/main.js'%}"></script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png'%}" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>About Me - Mahmoud Sayed</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="{% url 'home'%}" class="nav__logo"> 
+                <span class="nav__logo-circle">MS</span>
+                <span class="nav__logo-name">Mahmoud Sayed</span>
+
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <span class="nav__title">Menu</span>
+                <h3 class="nav__name">Mahmoud</h3>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="{% url 'home'%}" class="nav__link active-link">Home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'about_me'%}" class="nav__link">About Me</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'projects'%}" class="nav__link">Projects</a>
+                    </li>
+                    
+                    <li class="nav__item">
+                        <a href="{% url 'services'%}" class="nav__link">Services</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="{% url 'contact_me'%}" class="nav__link nav__link-button">Contact Me</a>
+                    </li>
+                </ul>
+                <!-- ---  CLOSE BUTTON --- -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <div class="nav__buttons">
+                <!-- -- TOGGLE BUTTONS --  -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-4-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== ABOUT ====================-->
+    <section class="about section" id="about">
+        <div class="about__container container grid">
+            <h2 class="section__title-1">
+                About Me.
+            </h2>
+            <div class="about__perfil">
+                <div class="about__image">
+                    <img src="{% static 'img/about.jpg'%}" alt="image" class="about__img">
+                    <div class="about__shadow"></div>
+                    <div class="geometric-box"></div>
+                    <img src="{% static 'img/random-lines.svg'%}" alt="image" class="about__line">
+                    <div class="about__box"></div>
+                </div>
+            </div>
+            <div class="about__info">
+                <p class="about__description">
+
+                    Passionate AI engineer, <b>adept at crafting intelligent solutions.</b> and have <b>9 Month</b> of experience. I specialize in
+                    <b>creating algorithms</b> that transform data into meaningful insights. With a foundation in <b>machine learning</b> and a knack for <b>problem-solving.</b> My journey is defined by innovation, dedication, and a relentless pursuit
+                    of excellence...
+                </p>
+
+                <ul class="about__list">
+                    <li class="about__item">
+                        <b>Proficiency in languages such as: <br>Python, machine learning concepts, deep learning frameworks, data preprocessing,
+                        Ability to design and optimize algorithms for various AI applications
+                    </li>
+                </ul>
+                <div class="about__buttons">
+                    <a href="{% url 'contact_me'%}" class="button">
+                        <i class="ri-send-plane-line"></i> Contact Me
+                    </a>
+                    <a href="{% static 'https://www.linkedin.com/in/mhmudsayd/'%}" target="_blank" class="button__ghost">
+                        <i class="ri-linkedin-box-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==================== Experiance ====================-->
+    <section class="about section" id="about">
+        <div class="about__container container grid">
+            <h2 class="section__title-1">
+                Senior AI Engineer.
+            </h2>
+            <div class="about__perfil">
+                <div class="about__image">
+                    <img src="{% static 'img/Innovate.png'%}" alt="image" class="about__img">
+                    <div class="about__shadow"></div>
+                    <div class="geometric-box"></div>
+                    <img src="{% static 'img/random-lines.svg'%}" alt="image" class="about__line">
+                    <div class="about__box"></div>
+                </div>
+            </div>
+            <div class="about__info">
+                <p class="about__description">
+
+                    As a senior AI engineer, <b>at Innovate Tech Solutions.</b> I lead a team focused on developing cutting-edge machine learning models for various projects. My responsibilities include:Designing and implementing
+                    <b>deep learning models</b> for image recognition in healthcare applications. Leading research initiatives to explore and integrate the
+                    <b>latest advancements in natural language processing NLP.</b> Collaborating with cross-functional teams to integrate AI solutions into existing products, resulting in a 20% improvement in user engagement.
+                    <b>Mentoring junior engineers</b> and conducting regular knowledge-sharing sessions on AI and <b>machine learning trends.
+                </p>
+
+                <div class="about__buttons">
+                    <a href="{% url 'contact_me'%}" class="button">
+                        <i class="ri-send-plane-line"></i> Contact Me
+                    </a>
+                    <a href="{% static 'https://www.linkedin.com/in/mhmudsayd/'%}" target="_blank" class="button__ghost">
+                        <i class="ri-linkedin-box-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!--==================== Data Scientist ====================-->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <h2 class="section__title-1">
+                    Data Scientist.
+                </h2>
+    
+                <div class="about__perfil">
+                    <div class="about__image">
+                        <img src="{% static 'img/generation.png'%}" alt="image" class="about__img">
+                        <div class="about__shadow"></div>
+                        <div class="geometric-box"></div>
+                        <img src="{% static 'img/random-lines.svg'%}" alt="image" class="about__line">
+                        <div class="about__box"></div>
+                    </div>
+                </div>
+                <div class="about__info">
+                    <p class="about__description">
+
+                        Data Scientist at Smart Analytics, Inc. <b>As a data scientist, I played a key role in analyzing large datasets and deriving actionable insights. 
+                        Some of my accomplishments include:
+                        </b> Developing predictive models to optimize supply chain operations, resulting in a 15% reduction in operational costs.
+                        <b>Implementing anomaly</b> detection algorithms for real-time monitoring of system performance, leading to early issue identification and resolution.
+                        <b>Creating data visualization dashboards to communicate complex analytical results to non-technical stakeholders.
+                        </p>
+    
+        
+                    <div class="about__buttons">
+                        <a href="{% url 'contact_me'%}" class="button">
+                            <i class="ri-send-plane-line"></i> Contact Me
+                        </a>
+                        <a href="{% static 'https://www.linkedin.com/in/mhmudsayd/'%}" target="_blank" class="button__ghost">
+                            <i class="ri-linkedin-box-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    <!--==================== FOOTER ====================-->
+<footer class="footer">
+    <div class="footer__container container grid">
+        <ul class="footer__links">
+            <li>
+                <a href="{% url 'home'%}" class="footer-link">Home</a>
+            </li>
+
+            <li>
+                <a href="#about" class="footer-link">Who Am I</a>
+            </li>
+
+            <li>
+                <a href="{% url 'projects'%}" class="footer-link">Projects</a>
+            </li>
+        </ul>
+        <span class="footer__copy">
+        &#169; All Rights Reserved By
+        <a href="#">Mahmoud</a>
+    </span>
+    </div>
+</footer>
+
+<!--========== SCROLL UP ==========-->
+
+<a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-s-line"></i>
+</a>
+<!--=============== SCROLLREVEAL ===============-->
+<script src="{% static 'js/scrollreveal.min.js' %}"></script>
+
+
+<!--=============== EMAIL JS ===============-->
+
+
+<!--=============== MAIN JS ===============-->
+<script src="{% static 'js/main.js'%}"></script>
+</body>
+
+</html>
